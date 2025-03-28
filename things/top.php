@@ -27,8 +27,3 @@
         }
     </style>
 </head>
-
-<body>
-    <h1>Sign in Page</h1>
-</body>
-</html>

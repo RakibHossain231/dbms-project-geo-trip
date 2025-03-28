@@ -1,35 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geo Trips</title>
-    <!-- tailwind link  -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- font awesome link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- daisy ui cdn  -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- playfair font  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-        rel="stylesheet">
-    <style>
-        .header-font {
-            font-family: "Playfair Display", serif;
-            font-optical-sizing: auto;
-            font-weight: bolder;
-        }
-    </style>
-</head>
+<?php include 'things/top.php' ?>
 
 <body class="bg-blue-100">
-    <header class="h-24 w-full">
+    <!-- <header class="h-24 w-full">
         <nav class="flex flex-row max-h-24  bg-blue-400 justify-between items-center px-4 ">
             <div class="max-h-24"><img class="rounded-2xl max-h-24 p-2" src="resources/images/geo_travel_logo.png"
                     alt=""></div>
@@ -47,7 +19,8 @@
 
             </div>
         </nav>
-    </header>
+    </header> -->
+    <?php include 'things/navbar.php' ?>
     <!-- carousal section  -->
     <section class="mx-10 mt-1 rounded-md">
         <!-- slider carousal code  -->
@@ -305,7 +278,7 @@
         </div>
         </div>
     </section>
-    <div class="max-w-4xl mx-auto py-10 px-5 mx-10 mt-2">
+    <div class="max-w-4xl mx-auto py-10 px-5  mt-2">
         <h2 class="text-3xl font-bold text-center text-gray-800 mb-6">Frequently Asked Questions</h2>
         <div class="space-y-4">
             <?php
@@ -382,32 +355,8 @@
             <h4 class="text-white font-semibold mt-4">- Alexander Sorloth</h4>
         </div>
     </section>
-    <footer class="bg-gray-900 text-white py-6 px-10 mt-2">
-        <div class="container mx-auto flex justify-between">
-            <div>
-                <h3 class="text-xl font-bold header-font">Geo Trips</h3>
-                <p>Explore the world with ease!</p>
-            </div>
-            <div>
-                <h4 class="text-lg font-semibold">Quick Links</h4>
-                <ul>
-                    <li><a href="#" class="hover:underline">About Us</a></li>
-                    <li><a href="#" class="hover:underline">Services</a></li>
-                    <li><a href="#" class="hover:underline">FAQs</a></li>
-                    <li><a href="contact_us.php" class="hover:underline">Contact Us</a></li>
-
-                </ul>
-            </div>
-            <div>
-                <h4 class="text-lg font-semibold">Follow Us</h4>
-                <div class="flex gap-6 mt-2">
-                    <i class="fa-brands fa-facebook text-2xl"></i>
-                    <i class="fa-brands fa-twitter text-2xl"></i>
-                    <i class="fa-brands fa-instagram text-2xl"></i>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <!-- footer section  -->
+    <?php include 'things/footer.php'; ?>
 
 
 

@@ -1,63 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Registration Form</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- font awesome link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- daisy ui cdn  -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- playfair font  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-        rel="stylesheet">
-</head>
+<?php include 'things/top.php'; ?>
 <body class="bg-blue-200 flex flex-col min-h-screen">
     
-    <!-- <header class="w-full bg-blue-400 fixed top-0 left-0 shadow-md z-50">
-        <nav class="flex justify-between items-center p-4 max-w-6xl mx-auto">
-            <div class="h-16">
-                <img class="rounded-2xl h-full" src="resources/images/geo_travel_logo.png" alt="Logo">
-            </div>
-            <ul class="flex space-x-4 font-bold">
-                <li><a class="hover:bg-cyan-400 p-2 rounded-lg" href="home.php">Home</a></li>
-                <li><a class="hover:bg-cyan-400 p-2 rounded-lg" href="about.php">About Us</a></li>
-                <li><a class="hover:bg-cyan-400 p-2 rounded-lg" href="services.php">Services</a></li>
-                <li><a class="hover:bg-cyan-400 p-2 rounded-lg" href="packages.php">Packages</a></li>
-                <li><a class="hover:bg-cyan-400 p-2 rounded-lg" href="contacts.php">Contacts</a></li>
-            </ul>
-            <div class="space-x-2">
-                <a href="login.php"><button class="bg-orange-400 p-2 rounded hover:bg-orange-300">Admin</button></a>
-                <a href="signin.php"><button class="bg-purple-600 p-2 rounded hover:bg-purple-400">Sign in</button></a>
-                <a href="Registration.php"><button class="bg-teal-500 p-2 rounded hover:bg-teal-300">Sign up</button></a>
-            </div>
-        </nav>
-    </header> -->
-    <header class="h-24 w-full">
-        <nav class="flex flex-row max-h-24  bg-blue-400 justify-between items-center px-4 ">
-            <div class="max-h-24"><img class="rounded-2xl max-h-24 p-2" src="resources/images/geo_travel_logo.png"
-                    alt=""></div>
-            <ul class="flex flex-row justify-evenly gap-4 font-bold font-sans">
-                <li><a class="hover:bg-cyan-400 p-2 rounded-lg" href="home.php">Home</a></li>
-                <li><a class="hover:bg-cyan-400 p-2 rounded-lg" href="about.php">About Us</a></li>
-                <li><a class="hover:bg-cyan-400 p-2 rounded-lg" href="services.php">Services</a></li>
-                <li><a class="hover:bg-cyan-400 p-2 rounded-lg" href="packages.php">Packages</a></li>
-                <li><a class="hover:bg-cyan-400 p-2 rounded-lg" href="contacts.php">Contacts</a></li>
-            </ul>
-            <div>
-                <a href="login.php"><button class="btn bg-orange-400 p-4 hover:bg-orange-300"><i class="fa-solid fa-lock" style="color: #262726;"></i>Admin</button></a>
-                <a href="signin.php"><button class="btn bg-purple-600 p-4 hover:bg-purple-400"><i class="fa-solid fa-arrow-right-to-bracket"></i>Sign in</button></a>
-                <a href="Registration.php"><button class="btn bg-teal-500 p-4 hover:bg-teal-300"><i class="fa-solid fa-user-plus"></i>Sign up</button></a>
-
-            </div>
-        </nav>
-    </header>
+    <?php include 'things/navbar.php' ?>
 
     <main class="flex flex-col items-center justify-between flex-grow pt-24 px-4 w-[80%] mx-auto">
     <div class="flex w-full max-w-screen-lg bg-black rounded-lg shadow-lg overflow-scroll">
@@ -121,5 +65,10 @@
             </form>
         </div>
     </div>
+
 </body>
+<div class="w-[100vw]">
+<?php include 'things/footer.php'; ?>
+</div>
 </html>
+

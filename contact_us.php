@@ -1,58 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geo Trips</title>
-    <!-- tailwind link  -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- font awesome link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- daisy ui cdn  -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- playfair font  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-        rel="stylesheet">
-    <style>
-        .header-font {
-            font-family: "Playfair Display", serif;
-            font-optical-sizing: auto;
-            font-weight: bolder;
-        }
-
-        .form-bg {
-            background-color: #5D5D81;
-        }
-    </style>
-</head>
+<?php include 'things/top.php'; ?>
 
 <body>
-    <header class="h-24 w-full">
-        <nav class="flex flex-row max-h-24  bg-blue-400 justify-between items-center px-4 ">
-            <div class="max-h-24"><img class="rounded-2xl max-h-24 p-2" src="resources/images/geo_travel_logo.png"
-                    alt=""></div>
-            <ul class="flex flex-row justify-evenly gap-4 font-bold font-sans">
-                <li><a class="hover:bg-cyan-400 p-2 rounded-lg" href="home.php">Home</a></li>
-                <li><a class="hover:bg-cyan-400 p-2 rounded-lg" href="about.php">About Us</a></li>
-                <li><a class="hover:bg-cyan-400 p-2 rounded-lg" href="about.php">Services</a></li>
-                <li><a class="hover:bg-cyan-400 p-2 rounded-lg" href="packages.php">Packages</a></li>
-                <li><a class="hover:bg-cyan-400 p-2 rounded-lg" href="contacts.php">Contacts</a></li>
-            </ul>
-            <div>
-                <a href="login.php"><button class="btn bg-orange-400 p-4 hover:bg-orange-300"><i class="fa-solid fa-lock" style="color: #262726;"></i>Admin</button></a>
-                <a href="signin.php"><button class="btn bg-purple-600 p-4 hover:bg-purple-400"><i class="fa-solid fa-arrow-right-to-bracket"></i>Sign in</button></a>
-                <a href="registration.php"><button class="btn bg-teal-500 p-4 hover:bg-teal-300"><i class="fa-solid fa-user-plus"></i>Sign up</button></a>
-
-            </div>
-        </nav>
-    </header>
-
+    <?php include 'things/navbar.php' ?>
 </body>
 <!-- contact us box container  -->
 <div class="max-w-[90%] mx-auto bg-[#0D1821] shadow-lg rounded-2xl p-8 md:p-12 space-y-6 mt-1 text-white grid grid-cols-2 gap-4 items-center justify-eve">
@@ -67,7 +16,7 @@
         <div>
             <i class="fa-solid fa-phone mr-1" style="color: #74C0FC;"></i>01913389573 <br>
             <i class="fa-brands fa-whatsapp mr-1" style="color: #1fc75a;"></i>01913389573 <br>
-            <i class="fa-duotone fa-solid fa-envelope mr-1" style="--fa-primary-color: #00d5ff; --fa-secondary-color: #4b84af; --fa-secondary-opacity: 1; mr-1"></i>Geotrips19@gmail.com<br>
+            <i class="fa-duotone fa-solid fa-envelope mr-1" style="--fa-primary-color: #00d5ff; --fa-secondary-color: #4b84af; --fa-secondary-opacity: 1;"></i>Geotrips19@gmail.com<br>
             <i class="fa-duotone fa-solid fa-envelope mr-1" style="--fa-primary-color: #00d5ff; --fa-secondary-color:#4b84af; --fa-secondary-opacity:1;"></i>Mesbah_70@yahoo.com<br>
         </div>
 
@@ -106,13 +55,16 @@
                     <textarea name="message" id="message" cols="30" rows="5" placeholder="Your Message"
                         class="p-3 rounded-lg bg-gray-800 text-white border border-gray-600 focus:ring-2 focus:ring-orange-400 outline-none"></textarea>
 
-                    <button class="btn bg-gradient-to-r from-blue-300 to-purple-700 p-4 hover:from-blue-600 hover:to-blue-800 text-white font-semibold rounded-lg shadow-md transition-all duration-300 mx-auto">
+                    
+                </div>
+                <button class="btn bg-gradient-to-r from-blue-300 to-purple-700 p-4 hover:from-blue-600 hover:to-blue-800 text-white font-semibold rounded-lg shadow-md transition-all duration-300 mx-auto">
                         Send Message
                     </button>
-                </div>
             </form>
-            <!-- add socials here  -->
+            
         </div>
     </div>
-
+<div class="col-span-2  mt-4 bg-slate-700">
+<?php include 'things/footer.php'; ?>
+</div>
 </html>

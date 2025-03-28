@@ -1,46 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Under Development</title>
-    <!-- tailwind link  -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- font awesome link  -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- daisy ui cdn  -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        .header-font {
-            font-family: "Playfair Display", serif;
-        }
-    </style>
-</head>
+<?php include 'things/top.php'; ?>
 
 <body class="bg-gray-100 text-gray-900">
-    <header class="h-24 w-full">
-        <nav class="flex flex-row max-h-24  bg-blue-400 justify-between items-center px-4 ">
-            <div class="max-h-24"><img class="rounded-2xl max-h-24 p-2" src="resources/images/geo_travel_logo.png"
-                    alt=""></div>
-            <ul class="flex flex-row justify-evenly gap-4 font-bold font-sans">
-                <li><a class="hover:bg-cyan-400 p-2 rounded-lg" href="home.php">Home</a></li>
-                <li><a class="hover:bg-cyan-400 p-2 rounded-lg" href="about.php">About Us</a></li>
-                <li><a class="hover:bg-cyan-400 p-2 rounded-lg" href="services.php">Services</a></li>
-                <li><a class="hover:bg-cyan-400 p-2 rounded-lg" href="packages.php">Packages</a></li>
-                <li><a class="hover:bg-cyan-400 p-2 rounded-lg" href="contacts.php">Contacts</a></li>
-            </ul>
-            <div>
-                <a href="login.php"><button class="btn bg-orange-400 p-4 hover:bg-orange-300"><i class="fa-solid fa-lock" style="color: #262726;"></i>Admin</button></a>
-                <a href="signin.php"><button class="btn bg-purple-600 p-4 hover:bg-purple-400"><i class="fa-solid fa-arrow-right-to-bracket"></i>Sign in</button></a>
-                <a href="registration.php"><button class="btn bg-teal-500 p-4 hover:bg-teal-300"><i class="fa-solid fa-user-plus"></i>Sign up</button></a>
-
-            </div>
-        </nav>
-    </header>
+    <?php include 'things/navbar.php' ?>
 
     <!-- Hero Section -->
     <section class="relative h-[60vh] bg-cover bg-center flex items-center justify-center" style="background-image: url('https://source.unsplash.com/1600x900/?travel,nature')">
