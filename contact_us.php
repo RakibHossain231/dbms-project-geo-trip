@@ -57,7 +57,7 @@
 
                     
                 </div>
-                <button class="btn bg-gradient-to-r from-blue-300 to-purple-700 p-4 hover:from-blue-600 hover:to-blue-800 text-white font-semibold rounded-lg shadow-md transition-all duration-300 mx-auto">
+                <button class="btn bg-gradient-to-r from-blue-300 to-purple-700 p-4 hover:from-blue-600 hover:to-blue-800 text-white font-semibold rounded-lg shadow-md transition-all duration-300 mx-auto mt-2">
                         Send Message
                     </button>
             </form>

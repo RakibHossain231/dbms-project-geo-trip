@@ -99,7 +99,7 @@
     <section class="bg-white py-16">
         <div class="max-w-6xl mx-auto px-6 text-center">
             <h2 class="text-3xl font-bold text-blue-600">What Our Customers Say</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+            <div class="grid grid-cols-3 gap-8 mt-8">
                 <div class="p-6 bg-gray-100 rounded-lg shadow-lg">
                     <p class="text-gray-700 italic">"Geo Trips made our honeymoon absolutely perfect! From planning to execution, everything was flawless."</p>
                     <h3 class="text-xl font-bold mt-4">— Emily & James</h3>
@@ -115,7 +115,23 @@
                     <h3 class="text-xl font-bold mt-4">— Marco Rossi</h3>
                     <p class="text-gray-500">Italy</p>
                 </div>
+                <div class="p-6 bg-gray-100 rounded-lg shadow-lg">
+                    <p class="text-gray-700 italic">" The accommodations were top-notch, the guides were incredibly knowledgeable, and the itinerary was perfectly balanced. "</p>
+                    <h3 class="text-xl font-bold mt-4">— Joshua & Mia</h3>
+                    <p class="text-gray-500">Mexico</p>
+                </div>
+                <div class="p-6 bg-gray-100 rounded-lg shadow-lg">
+                    <p class="text-gray-700 italic">" Their attention to detail is remarkable. They took care of every aspect of our trip, allowing us to relax and fully immerse ourselves in the experience."</p>
+                    <h3 class="text-xl font-bold mt-4">— Steve jackson</h3>
+                    <p class="text-gray-500">Wales</p>
+                </div>
+                <div class="p-6 bg-gray-100 rounded-lg shadow-lg">
+                    <p class="text-gray-700 italic">"We felt safe and well-cared for throughout the entire journey. The memories we made will last a lifetime. If you're looking for a hassle-free, enriching travel experience, Geo Trips is the way to go!"</p>
+                    <h3 class="text-xl font-bold mt-4">— Emily and Ben K.</h3>
+                    <p class="text-gray-500">Italy</p>
+                </div>
             </div>
+            
         </div>
     </section>
 
