@@ -1,74 +1,122 @@
+
+
+
+
+
+
+
+
 <?php include 'things/top.php'; ?>
-<body class="bg-blue-200 flex flex-col min-h-screen">
-    
-    <?php include 'things/navbar.php' ?>
 
-    <main class="flex flex-col items-center justify-between flex-grow pt-24 px-4 w-[80%] mx-auto">
-    <div class="flex w-full max-w-screen-lg bg-black rounded-lg shadow-lg overflow-scroll">
-        <!-- Image Container (80% width) -->
-        <div class="w-1/2 bg-gray-200 flex items-center justify-center overflow-hidden">
-            <img src="resources/images/reg_pic.jpg" alt="Registration" class="w-full h-full object-cover">
+<body class="bg-[url('resources/images/airplane_bg.png')] bg-repeat  min-h-screen before:opacity-70 ">
+<?php include 'things/navbar.php' ?>
+<!-- form container -->
+<div class="bg-white rounded-lg shadow-xl p-8 max-w-2xl w-full container mx-auto mt-4 bg-gradient-to-b from-white via-blue-50 to-teal-50">
+        <div class="mb-8 text-center">
+            <h1 class="text-3xl font-bold text-gray-800">Create Your Account</h1>
+            <p class="text-gray-600 mt-2">Please fill in your details to register</p>
         </div>
-
-        <!-- Form Container -->
-        <div class="flex-1 p-8 overflow-y-scroll  max-h-[80vh] w-4/5">
-            <h1 class="text-center text-xl font-bold text-blue-500 mb-6">Registration Form</h1>
-            <form method="post" action="registration.php">
-                <!-- Form Inputs -->
+        
+        <form class="space-y-6" action="login.php" method="POST">
+            <!-- Grid for side-by-side fields -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Personal Information Section -->
+                <!-- First Name and Last Name (positioned together) -->
                 <div>
-                        <label class="block font-medium text-white" for="firstName">First Name</label>
-                        <input class="w-full p-2 border rounded bg-gray-100 text-gray-900" type="text" id="firstName" name="firstName" placeholder="Enter your first name">
-                    </div>
-                    <div>
-                        <label class="block font-medium text-white" for="lastName">Last Name</label>
-                        <input class="w-full p-2 border rounded bg-gray-100 text-gray-900" type="text" id="lastName" name="lastName" placeholder="Enter your last name">
-                    </div>
-                    <div>
-                        <label class="block font-medium text-white" for="dob">Date of Birth</label>
-                        <input class="w-full p-2 border rounded bg-gray-100 text-gray-900" type="date" id="dob" name="dob">
-                    </div>
-                    <div>
-                        <label class="block font-medium text-white" for="Nationality">Nationality</label>
-                        <input class="w-full p-2 border rounded bg-gray-100 text-gray-900" type="text" id="Nationality" name="Nationality" placeholder="Enter your nationality">
-                    </div>
-                    <div>
-                        <label class="block font-medium text-white" for="Passport">Passport Number</label>
-                        <input class="w-full p-2 border rounded bg-gray-100 text-gray-900" type="text" id="Passport" name="Passport" placeholder="Enter your passport number">
-                    </div>
-                    <div>
-                        <label class="block font-medium text-white" for="Email">Email Address</label>
-                        <input class="w-full p-2 border rounded bg-gray-100 text-gray-900" type="email" id="Email" name="Email" placeholder="Enter your email address">
-                    </div>
-                    <div>
-                        <label class="block font-medium text-white" for="phone">Phone Number</label>
-                        <input class="w-full p-2 border rounded bg-gray-100 text-gray-900" type="tel" id="phone" name="phone" placeholder="Enter your phone number">
-                    </div>
-                    <div>
-                        <label class="block font-medium text-white" for="user">User ID</label>
-                        <input class="w-full p-2 border rounded bg-gray-100 text-gray-900" type="text" id="user" name="user" placeholder="Create a user ID">
-                    </div>
-                    <div>
-                        <label class="block font-medium text-white" for="password">Password</label>
-                        <input class="w-full p-2 border rounded bg-gray-100 text-gray-900" type="password" id="password" name="password" placeholder="Create a password">
-                    </div>
-                    <div>
-                        <label class="block font-medium text-white" for="cp">Confirm Password</label>
-                        <input class="w-full p-2 border rounded bg-gray-100 text-gray-900" type="password" id="cp" name="cp" placeholder="Confirm your password">
-                    </div>
-                    <div>
-                        <label class="block font-medium text-white" for="Address">Current Address</label>
-                        <input class="w-full p-2 border rounded bg-gray-100 text-gray-900" type="text" id="Address" name="Address" placeholder="Enter your current address">
-                    </div>
-                    <div>
-                        <input class="w-full p-3 mt-3 bg-teal-500 text-white font-bold rounded hover:bg-teal-400 cursor-pointer" type="submit" value="Register">
-                    </div>
-            </form>
-        </div>
+                    <label for="f_name" class="block text-sm font-medium text-gray-700 mb-1">First Name</label>
+                    <input type="text" id="f_name" name="f_name" 
+                           class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+                
+                <div>
+                    <label for="l_name" class="block text-sm font-medium text-gray-700 mb-1">Last Name</label>
+                    <input type="text" id="l_name" name="l_name" 
+                           class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+                
+                <!-- Contact Information -->
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                    <input type="email" id="email" name="email" 
+                           class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+                
+                <div>
+                    <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" 
+                           class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+                
+                <!-- Address (spans full width) -->
+                <div class="md:col-span-2">
+                    <label for="address" class="block text-sm font-medium text-gray-700 mb-1">Address</label>
+                    <textarea id="address" name="address" rows="2" 
+                              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+                </div>
+                
+                <!-- Date of Birth -->
+                <div>
+                    <label for="dob" class="block text-sm font-medium text-gray-700 mb-1">Date of Birth</label>
+                    <input type="date" id="dob" name="dob" 
+                           class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+                
+                <!-- Identification Information (Nationality and Passport positioned together) -->
+                <div>
+                    <label for="nationality" class="block text-sm font-medium text-gray-700 mb-1">Nationality</label>
+                    <input type="text" id="nationality" name="nationality" 
+                           class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+                
+                <div>
+                    <label for="passport" class="block text-sm font-medium text-gray-700 mb-1">Passport Number</label>
+                    <input type="text" id="passport" name="passport" 
+                           class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+                
+                <!-- Account Information (Username and Password at the end) -->
+                <div>
+                    <label for="username" class="block text-sm font-medium text-gray-700 mb-1">Username</label>
+                    <input type="text" id="username" name="username" 
+                           class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+                
+                <div>
+                    <label for="password" class="block text-sm font-medium text-gray-700 mb-1">Password</label>
+                    <input type="password" id="password" name="password" 
+                           class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+                </div>
+            </div>
+            
+            <!-- Terms and Conditions -->
+            <div class="flex items-start">
+                <div class="flex items-center h-5">
+                    <input id="terms" name="terms" type="checkbox"
+                           class="h-4 w-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500" required>
+                </div>
+                <div class="ml-3 text-sm">
+                    <label for="terms" class="font-medium text-gray-700">I agree to the <a href="#" class="text-blue-600 hover:underline">Terms and Conditions</a></label>
+                </div>
+            </div>
+            
+            <!-- Submit Button -->
+            <div>
+                <button type="submit" 
+                        class="w-full bg-blue-600 text-white py-3 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors">
+                    Create Account
+                </button>
+            </div>
+            
+            <!-- Sign In Link -->
+            <div class="text-center text-sm">
+                <p class="text-gray-600">
+                    Already have an account? <a href="#" class="text-blue-600 hover:underline font-medium">Sign In</a>
+                </p>
+            </div>
+        </form>
     </div>
 
 </body>
-<div class="w-[100vw]">
 <?php include 'things/footer.php'; ?>
-</div>
-</html>
 
+</html>
