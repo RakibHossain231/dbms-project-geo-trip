@@ -14,10 +14,9 @@ if (isset($_POST['submit'])) {
     $nationality = mysqli_real_escape_string($conn,$_POST['nationality']);
     $pp_no = mysqli_real_escape_string($conn,$_POST['passport']);
 
-    print_r($_POST);
     $termError = "";
     if(empty($_POST['submit'])){
-        $termError = "Sorry You must accept the terms and conditinos to register";
+        
     }
     else {
         $query = "INSERT INTO customer(f_name, l_name, dob, phone, email, address, nationality, pp_no, user_name, pass) 
