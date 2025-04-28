@@ -1,6 +1,5 @@
 <?php
-echo $_SERVER['REQUEST_URI'];
-echo '<br>';
+
 function page_name()
 {
     if ($_SERVER['REQUEST_URI'] === "/geo%20trips/home.php") return "home";

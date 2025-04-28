@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 28, 2025 at 12:07 PM
+-- Generation Time: Apr 28, 2025 at 12:33 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.0.30
 
@@ -31,7 +31,7 @@ CREATE TABLE `admin` (
   `id` int(11) NOT NULL,
   `name` varchar(50) DEFAULT NULL,
   `email` varchar(100) DEFAULT NULL,
-  `admin_pass` varchar(30) DEFAULT NULL,
+  `admin_pass` varchar(255) DEFAULT NULL,
   `join_date` date DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -113,7 +113,7 @@ CREATE TABLE `bookings` (
 
 CREATE TABLE `cancellations` (
   `id` int(11) NOT NULL,
-  `cancelled_on` int(11) DEFAULT NULL,
+  `cancelled_on` date DEFAULT NULL,
   `refund_amount` float DEFAULT NULL,
   `reason` varchar(255) DEFAULT NULL,
   `booking_id` int(11) DEFAULT NULL
