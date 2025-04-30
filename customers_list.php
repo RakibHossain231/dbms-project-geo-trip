@@ -78,7 +78,7 @@ if (!$conn) {
                         <td class='py-3 px-6'>{$customer['nationality']}</td>
                         <td class='py-3 px-6'>{$customer['pp_no']}</td>
                         <td class='py-3 px-6'>{$customer['user_name']}</td>
-                        <td class='py-3 px-6 flex flex-row gap-2 justify-center items-center '><a href='update_design.php?id={$customer['customerID']} ' class='hover:bg-blue-500 p-2 rounded-sm bg-black text-white '>Update</a> <a href='update_design.php?id={$customer['customerID']} ' class='hover:bg-blue-500 p-2 rounded-sm bg-red-600 text-white '>Delete</a></td>
+                        <td class='py-3 px-6 flex flex-row gap-2 justify-center items-center '><a href='update_design.php?id={$customer['customerID']} ' class='hover:bg-blue-500 p-2 rounded-sm bg-black text-white '>Update</a> <a href='delete_customer.php?id={$customer['customerID']} ' class='hover:bg-blue-500 p-2 rounded-sm bg-red-600 text-white '>Delete</a></td>
 
                     </tr>";
                     }
