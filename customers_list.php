@@ -107,6 +107,7 @@ if (!$conn) {
                         <th class="py-3 px-6 border-b">Name</th>
                         <th class="py-3 px-6 border-b">Email</th>
                         <th class="py-3 px-6 border-b">Joining Date</th>
+                        <th class="py-3 px-6 border-b">Operations</th>
                     </tr>
                 </thead>
                 <tbody class="bg-white text-black divide-y divide-indigo-400">
@@ -118,6 +119,7 @@ if (!$conn) {
                         <td class='py-3 px-6'>{$admin['name']}</td>
                         <td class='py-3 px-6'>{$admin['email']}</td>
                         <td class='py-3 px-6'>{$admin['join_date']}</td>
+                        <td class='py-3 px-6 flex flex-row gap-2 justify-center items-center '><a href='update_admin.php?id={$admin['id']} ' class='hover:bg-blue-500 p-2 rounded-sm bg-black text-white '>Update</a> <a href='delete_admin.php?id={$admin['id']} ' class='hover:bg-blue-500 p-2 rounded-sm bg-red-600 text-white '>Delete</a></td>
 
                     </tr>";
                     }
@@ -135,8 +137,6 @@ if (!$conn) {
             </table>
         </div>
     </section>
-
-
 
     <?php include 'things/footer.php' ?>
 </body>

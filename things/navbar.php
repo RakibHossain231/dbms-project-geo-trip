@@ -12,7 +12,7 @@ function page_name()
 }
 ?>
 <header class="h-20 w-full sticky top-0 z-50">
-    <nav class="flex flex-row max-h-24 bg-blue-400 justify-between items-center px-4 ">
+    <nav class="flex flex-row max-h-24 bg-[#6C91C2] justify-between items-center px-4 ">
         <div class="max-h-24"><img class="rounded-2xl max-h-20 p-2" src="resources/images/geo_travel_logo.png"
                 alt=""></div>
         <ul class="flex flex-row justify-evenly gap-4 font-bold font-sans">
