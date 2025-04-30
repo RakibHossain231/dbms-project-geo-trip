@@ -45,7 +45,7 @@ if (!$conn) {
     </header>
     <!-- Customer Data showing section  -->
     <section class=" container  mx-2 p-4 flex flex-col  rounded-lg  mt-4 mb-8 ">
-        <h1 class="text-xl font-bold text-slate-800 pb-2 ">Customer List</h1>
+        <h1 class="text-xl font-bold text-slate-800 pb-2 ">Customer List <i class="fa-regular fa-circle-user" style="color: #0b105b;"></i></h1>
         <div class="overflow-x-scroll">
             <table class=" table-auto border-2 border-gray-300">
                 <thead class="bg-black text-white">
@@ -74,7 +74,7 @@ if (!$conn) {
                         <td class='py-3 px-6'>{$customer['dob']}</td>
                         <td class='py-3 px-6'>{$customer['phone']}</td>
                         <td class='py-3 px-6'>{$customer['email']}</td>
-                        <td class='py-3 px-6 col-span-2'>{$customer['address']}</td>
+                        <td class='text-sm py-3 px-6 col-span-2'>{$customer['address']}</td>
                         <td class='py-3 px-6'>{$customer['nationality']}</td>
                         <td class='py-3 px-6'>{$customer['pp_no']}</td>
                         <td class='py-3 px-6'>{$customer['user_name']}</td>
@@ -98,7 +98,7 @@ if (!$conn) {
     </section>
     <!-- admin data showing section  -->
     <section class="container mx-2 p-4 flex flex-col  rounded-lg  mt-4 mb-8 ">
-        <h1 class="text-xl font-bold text-slate-800 pb-2 ">Admin List</h1>
+        <h1 class="text-xl font-bold text-slate-800 pb-2 ">Admin List <i class="fa-solid fa-screwdriver-wrench"></i></h1>
         <div class="overflow-x-auto">
             <table class="w-full table-auto border border-gray-300">
                 <thead class="bg-blue-500 text-white">

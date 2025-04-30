@@ -53,7 +53,7 @@
                 <!-- main content container  -->
                 <div class="flex flex-col md:flex-row justify-between">
                     <!-- text content  -->
-                    <div class="flex flex-col  items-start justify-center gap-y-10 p-10 gap-y-8 flex-1 text-black">
+                    <div class="flex flex-col  items-start justify-center  p-10 gap-y-8 flex-1 text-black">
                         <h1 class="text-5xl font-bold">Himalayan Heritage Kathmandu</h1>
                         <p> Discover the soul of Nepal with our Kathmandu package. Explore ancient temples, breathtaking landscapes, and vibrant culture. Your adventure awaits!</p>
                         <button class="btn bg-blue-500 hover:bg-teal-300 p-4 text-white border-none">Purchase</button>
