@@ -23,9 +23,9 @@ function page_name()
             <li><a class="hover:bg-cyan-400 p-2 rounded-lg <?php if(page_name()==='visa_docs') echo 'text-neutral-200'; ?>" href="visa_docs.php">Visa Info</a></li>
         </ul>
         <div>
-            <a href="admin_login.php"><button class="btn bg-orange-400 p-4 hover:bg-orange-300"><i class="fa-solid fa-lock" style="color: #262726;"></i>Admin</button></a>
-            <a href="login.php"><button class="btn bg-purple-600 p-4 hover:bg-purple-400"><i class="fa-solid fa-arrow-right-to-bracket"></i>Sign in</button></a>
-            <a href="Registration.php"><button class="btn bg-teal-500 p-4 hover:bg-teal-300"><i class="fa-solid fa-user-plus"></i>Sign up</button></a>
+            <a href="admin_login.php"><button class="btn bg-[#94B4C1] p-4 hover:bg-white hover:font-bold"><i class="fa-solid fa-lock" style="color: #262726;"></i>Admin</button></a>
+            <a href="login.php"><button class="btn bg-[#7AE2CF] p-4 hover:bg-white hover:font-bold"><i class="fa-solid fa-arrow-right-to-bracket"></i>Sign in</button></a>
+            <a href="Registration.php"><button class="btn bg-[#ECEFCA] p-4 hover:bg-white hover:font-bold"><i class="fa-solid fa-user-plus"></i>Sign up</button></a>
 
         </div>
     </nav>

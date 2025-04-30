@@ -139,7 +139,7 @@
     <section class="bg-blue-600 py-12 text-center text-white">
         <h2 class="text-3xl font-bold">Ready for Your Next Adventure?</h2>
         <p class="mt-2 text-lg">Contact us today and let’s plan the perfect trip for you!</p>
-        <a href="contact.php" class="mt-4 inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition">Contact Us</a>
+        <a href="contact_us.php" class="mt-4 inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition">Contact Us</a>
     </section>
 
 </body>

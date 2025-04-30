@@ -1,3 +1,5 @@
+<?php include 'things/top.php'; ?>
+
 <?php
 include 'things/db_connect.php';
 if (isset($_POST['submit'])) {
@@ -13,32 +15,37 @@ if (isset($_POST['submit'])) {
     $dob = mysqli_real_escape_string($conn,$_POST['dob']);
     $nationality = mysqli_real_escape_string($conn,$_POST['nationality']);
     $pp_no = mysqli_real_escape_string($conn,$_POST['passport']);
-
+    $gender = mysqli_real_escape_string($conn,$_POST['gender']);
     $termError = "";
     if(empty($_POST['submit'])){
         
     }
     else {
-        $query = "INSERT INTO customer(f_name, l_name, dob, phone, email, address, nationality, pp_no, user_name, pass) 
-                  VALUES ('$f_name', '$l_name', '$dob', '$phone', '$email', '$address', '$nationality', '$pp_no', '$username', '$password')";
+        if(empty($f_name) || empty($l_name) || empty($email) || empty($phone) || empty($address) || empty($dob) || empty($nationality) || empty($pp_no) || empty($username) || empty($password) || empty($gender)){
+            $termError = "Please fill in all fields";
+            header("Location:Registration.php?error=$termError");
+            exit();
+        }
+        $query = "INSERT INTO customer(f_name, l_name, dob, phone, email, address, nationality, pp_no, user_name, pass,gender) 
+                  VALUES ('$f_name', '$l_name', '$dob', '$phone', '$email', '$address', '$nationality', '$pp_no', '$username', '$password','$gender')";
         // $result = mysqli_query($conn, $query);
         if (mysqli_query($conn, $query)) {
             mysqli_close($conn);
             print_r('<div class="text-red-500">Success</div>');
-            sleep(10);
             header("Location: Registration.php");
             exit();
         } else {
+            echo '<h1 class = "text-red-800 font-bold font-sans text-2xl text-center w-auto h-auto">Error occured</h1> <pre class="text-red-500 font-semibold font-sans text-xl text-center w-auto h-auto">';
+            print_r(mysqli_error($conn));
+            echo '</pre>';
             mysqli_close($conn);
-            echo "Error: " . mysqli_error($conn);
-            header("Location: login.php");
-            exit();
+            die();
         }
     }
 }
 
 ?>
-<?php include 'things/top.php'; ?>
+
 
 <body class="bg-[url('resources/images/airplane_bg.png')] bg-repeat  min-h-screen before:opacity-70 ">
     <?php include 'things/navbar.php'; ?>
@@ -47,6 +54,12 @@ if (isset($_POST['submit'])) {
         <div class="mb-8 text-center">
             <h1 class="text-3xl font-bold text-gray-800">Create Your Account</h1>
             <p class="text-gray-600 mt-2">Please fill in your details to register</p>
+            <?php 
+                if(isset($_GET['error'])) {
+                    $error = $_GET['error'];
+                    echo '<div class="text-red-500 mt-2">'.$error.'</div>';
+                }
+            ?>
         </div>
 
         <form class="space-y-6" action="Registration.php" method="POST">
@@ -105,13 +118,21 @@ if (isset($_POST['submit'])) {
                     <input type="text" id="passport" name="passport"
                         class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" required>
                 </div>
+                <div>
+                    <label for="gender" class="block text-sm font-medium text-gray-700 mb-1">Gender</label>
+                    <select name="gender" id="" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-blue-200 text-stone-500">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                    
+                </div>
                 <hr class="col-span-3 h-[2px] bg-red-200 border-t-2 border-red-300 rounded-md my-4" />
                 <!-- Account Information (Username and Password at the end) -->
                 <div>
                     <label for="username" class="block text-sm font-medium text-gray-700 mb-1">Username</label>
                     <input type="text" id="username" name="username"
                         class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 bg-blue-200 text-stone-500" required placeholder="Choose a username">
-                </div>
+                </div> 
 
                 <div>
                     <label for="password" class="block text-sm font-medium text-gray-700 mb-1 ">Password</label>

@@ -64,7 +64,7 @@
             
         </div>
     </div>
-<div class="col-span-2  mt-4 bg-slate-700">
+<div class="col-span-2  mt-4 bg-slate-400 rounded-lg">
 <?php include 'things/footer.php'; ?>
 </div>
 </html>
