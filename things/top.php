@@ -19,13 +19,39 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
-        <!-- favicon -->
-        <link rel="icon" href="resources/airplane.png" type="image/x-icon">
+    <!-- favicon -->
+    <link rel="icon" href="resources/airplane.png" type="image/x-icon">
     <style>
         .header-font {
             font-family: "Playfair Display", serif;
             font-optical-sizing: auto;
             font-weight: bolder;
+        }
+
+        @keyframes softBlink {
+            0% {
+                opacity: 1;
+            }
+
+            25% {
+                opacity: 0.6;
+            }
+
+            50% {
+                opacity: 0.3;
+            }
+
+            75% {
+                opacity: 0.6;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        .blink {
+            animation: softBlink 2s ease-in-out infinite;
         }
     </style>
 </head>

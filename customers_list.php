@@ -1,6 +1,8 @@
 <?php
 include 'things/top.php';
 ?>
+
+
 <!-- work to fetch all the customer data  -->
 <?php
 include 'things/db_connect.php';
@@ -43,6 +45,11 @@ if (!$conn) {
     <header>
         <?php include 'things/navbar.php' ?>
     </header>
+    <h1 class="blink text-center p-2 bg-gradient-to-r from-pink-600 to-purple-500 bg-clip-text text-transparent text-2xl font-bold mt-2">
+        <?php if(!empty($_GET['msg'])){
+            echo $_GET['msg'];
+        } ?>
+    </h1>
     <!-- Customer Data showing section  -->
     <section class=" container  mx-2 p-4 flex flex-col  rounded-lg  mt-4 mb-8 ">
         <h1 class="text-xl font-bold text-slate-800 pb-2 ">Customer List <i class="fa-regular fa-circle-user" style="color: #0b105b;"></i></h1>

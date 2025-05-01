@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_GET['id'])) {
 <?php
         sleep(1);
         mysqli_close($conn);
-        header('Location: customers_list.php');
+        header('Location: customers_list.php?msg=Admin+deleted+successfully');
         exit();
     } else {
         echo "Error deleting record: " . mysqli_error($conn);

@@ -82,7 +82,7 @@ if (isset($_POST['update'])) {
 
     $res = mysqli_query($conn, $query);
     if ($res) {
-        header("Location: customers_list.php");
+        header("Location: customers_list.php?msg=Customer+data+updated+successfully");
         exit();
     } else {
         echo "Update failed: " . mysqli_error($conn);

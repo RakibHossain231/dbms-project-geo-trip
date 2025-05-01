@@ -1,0 +1,123 @@
+<?php include 'things/top.php'; ?>
+<body>
+    <?php include 'things/navbar.php'; ?>
+    <section class="min-h-screen bg-gradient-to-br from-slate-100 to-indigo-200 flex items-center justify-center px-4 py-10">
+        <div class="w-full max-w-5xl bg-white/80 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-200 p-10">
+
+            <!-- Heading -->
+            <h2 class="text-4xl font-extrabold text-center text-indigo-800 mb-10">
+                <i class="fas fa-toolbox mr-2"></i>Admin Control Panel
+            </h2>
+
+            <!-- Button Grid -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Users -->
+                <a href="customers_list.php" class="admin-btn bg-indigo-50 border-indigo-200 text-indigo-700 hover:bg-indigo-100">
+                    <i class="fas fa-users-cog text-2xl"></i>
+                    <div>
+                        <p class="font-semibold">Manage Users</p>
+                        <p class="text-sm text-gray-600">Update/Delete Admins & Customers</p>
+                    </div>
+                </a>
+
+                <!-- Search -->
+                <a href="search_customer.php" class="admin-btn bg-blue-50 border-blue-200 text-blue-700 hover:bg-blue-100">
+                    <i class="fas fa-search text-2xl"></i>
+                    <div>
+                        <p class="font-semibold">Search Customers</p>
+                        <p class="text-sm text-gray-600">Find customer records easily</p>
+                    </div>
+                </a>
+
+                <!-- Packages -->
+                <a href="packages_list.php" class="admin-btn bg-green-50 border-green-200 text-green-700 hover:bg-green-100">
+                    <i class="fas fa-box-open text-2xl"></i>
+                    <div>
+                        <p class="font-semibold">Manage Packages</p>
+                        <p class="text-sm text-gray-600">Create or edit travel/visa packages</p>
+                    </div>
+                </a>
+
+                <!-- Bookings -->
+                <a href="view_bookings.php" class="admin-btn bg-yellow-50 border-yellow-200 text-yellow-700 hover:bg-yellow-100">
+                    <i class="fas fa-book text-2xl"></i>
+                    <div>
+                        <p class="font-semibold">View Bookings</p>
+                        <p class="text-sm text-gray-600">See and manage all bookings</p>
+                    </div>
+                </a>
+
+                <!-- Payments -->
+                <a href="pending_payments.php" class="admin-btn bg-red-50 border-red-200 text-red-700 hover:bg-red-100">
+                    <i class="fas fa-money-check-alt text-2xl"></i>
+                    <div>
+                        <p class="font-semibold">Pending Payments</p>
+                        <p class="text-sm text-gray-600">Verify and track payments</p>
+                    </div>
+                </a>
+
+                <!-- Visa Assistance -->
+                <a href="visa_data.php" class="admin-btn bg-purple-50 border-purple-200 text-purple-700 hover:bg-purple-100">
+                    <i class="fas fa-passport text-2xl"></i>
+                    <div>
+                        <p class="font-semibold">Visa Assistance</p>
+                        <p class="text-sm text-gray-600">Manage visa applications</p>
+                    </div>
+                </a>
+
+                <!-- Coupons -->
+                <a href="manage_coupons.php" class="admin-btn bg-amber-50 border-amber-200 text-amber-700 hover:bg-amber-100">
+                    <i class="fas fa-ticket-alt text-2xl"></i>
+                    <div>
+                        <p class="font-semibold">Manage Coupons</p>
+                        <p class="text-sm text-gray-600">Add, edit or expire coupons</p>
+                    </div>
+                </a>
+
+                <!-- add new admin -->
+                <a href="add_admin.php" class="admin-btn bg-slate-50 border-slate-200 text-slate-700 hover:bg-slate-100">
+                    <i class="fas fa-user-circle text-2xl"></i>
+                    <div>
+                        <p class="font-semibold">New Admin</p>
+                        <p class="text-sm text-gray-600">Add new admin to the database</p>
+                    </div>
+                </a>
+
+                <!-- Logout -->
+                <a href="logout.php" class="admin-btn bg-black text-white border-gray-800 hover:bg-gray-900">
+                    <i class="fas fa-sign-out-alt text-2xl"></i>
+                    <div>
+                        <p class="font-semibold">Logout</p>
+                        <p class="text-sm">End your session securely</p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Tailwind Custom Class for Buttons -->
+    <style>
+        .admin-btn {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.25rem;
+            border-radius: 0.75rem;
+            border: 1px solid #e5e7eb;
+            /* Tailwind's gray-200 */
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+        }
+
+        .admin-btn:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+            background-color: white;
+            color: black;
+        }
+    </style>
+
+</body>
+<?php include 'things/footer.php'; ?>

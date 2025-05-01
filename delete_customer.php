@@ -21,7 +21,7 @@ include 'things/db_connect.php';
             <?php
             sleep(1);
             mysqli_close($conn);
-            header('Location: customers_list.php');
+            header('Location: customers_list.php?msg=Customer+deleted+successfully');
             exit();
         }else{
             echo "Error deleting record: " . mysqli_error($conn);
