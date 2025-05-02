@@ -13,8 +13,9 @@ function page_name()
 ?>
 <header class="h-20 w-full sticky top-0 z-50">
     <nav class="flex flex-row max-h-24 bg-[#6C91C2] justify-between items-center px-4 ">
-        <div class="max-h-24"><img class="rounded-2xl max-h-20 p-2" src="resources/images/geo_travel_logo.png"
-                alt=""></div>
+        <div class="max-h-24"><a href="home.php"><img class="rounded-2xl max-h-20 p-2" src="resources/images/geo_travel_logo.png"
+        alt=""></a> </div>
+        
         <ul class="flex flex-row justify-evenly gap-4 font-bold font-sans">
             <li><a class="hover:bg-cyan-400 p-2 rounded-lg  <?php if(page_name()==='home') echo 'text-neutral-200'; ?>" href="home.php">Home</a></li>
             <li><a class="hover:bg-cyan-400 p-2 rounded-lg <?php if(page_name()==='about') echo 'text-neutral-200'; ?>" href="about.php">About Us</a></li>
