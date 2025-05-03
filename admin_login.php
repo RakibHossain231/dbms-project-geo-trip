@@ -1,23 +1,40 @@
 <?php
 session_start();
 require 'things/db_connect.php';
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-  $admin_email = mysqli_escape_string($conn,$_POST['email']);
-  $admin_pass = mysqli_escape_string($conn,$_POST['password']);
-  $query = "select id,email,admin_pass from admin where email = '$admin_email';";
+  $admin_email = mysqli_real_escape_string($conn, $_POST['email']); // FIX: use real_escape_string
+  $admin_pass = $_POST['password']; // don't escape password
+
+  $query = "SELECT id, email, admin_pass FROM admin WHERE email = '$admin_email'";
   $result = mysqli_query($conn, $query);
-  if (!empty($result)) {
+
+  // Check if the query succeeded and returned a row
+  if ($result && mysqli_num_rows($result) > 0) {
     $row = mysqli_fetch_assoc($result);
     $hashed_pass = $row['admin_pass'];
+
     if (password_verify($admin_pass, $hashed_pass)) {
       $_SESSION['id'] = $row['id'];
       $_SESSION['type'] = 'admin';
       mysqli_close($conn);
       header("Location: admin_panel.php");
+      exit();
+    } else {
+      // Wrong password
+      mysqli_close($conn);
+      header("Location: admin_login.php?msg=Invalid+email+or+password");
+      exit();
     }
+  } else {
+    // No user found with that email
+    mysqli_close($conn);
+    header("Location: admin_login.php?msg=Invalid+email+or+password");
+    exit();
   }
 }
 ?>
+
 <?php include 'things/top.php'; ?>
 
 <body>
@@ -29,11 +46,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
       <h2 class="text-3xl font-bold text-center text-indigo-800 mb-6">
         <i class="fas fa-user-shield mr-2"></i>Admin Login
       </h2>
-      <?php 
-        if(isset($_GET['msg'])){
-          echo '<div class="text-red-500 text-center mb-4 blink">'.htmlspecialchars($_GET['msg']).'</div>';
-        }
+      <?php if (isset($_GET['msg'])):
+        $msg = htmlspecialchars($_GET['msg']);
       ?>
+        <div class="my-4 px-5 py-4 rounded-md border border-green-200 bg-green-50 text-green-800 text-sm shadow-sm">
+          <div class="flex items-center space-x-2">
+            <i class="fa-solid fa-message text-xl" style="color: #74C0FC;"></i>
+            <span><?php echo $msg; ?></span>
+          </div>
+        </div>
+      <?php endif; ?>
 
       <!-- Login Form -->
       <form action="admin_login.php" method="POST" class="space-y-5">

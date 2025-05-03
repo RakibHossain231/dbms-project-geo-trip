@@ -42,8 +42,9 @@ function page_name()
             <?php } elseif ($user_type === 'admin') {
             ?>
                 <a href="admin_panel.php"><button class="btn bg-red-500 p-4 hover:bg-white hover:font-bold"><i class="fa-duotone fa-solid fa-user-secret fa-xl" style="--fa-primary-color: #74C0FC; --fa-secondary-color: #74C0FC;"></i></button></a>
+                
             <?php } else if ($user_type === 'user') {  ?>
-                <a href="admin_login.php"><button class="btn bg-black text-white p-4 hover:bg-white hover:font-bold hover:text-black"><i class="fa-solid fa-user-tie" style="color: #74C0FC;"></i>Profile</button></a>
+                <a href="user_profile.php"><button class="btn bg-black text-white p-4 hover:bg-white hover:font-bold hover:text-black"><i class="fa-solid fa-user-tie" style="color: #74C0FC;"></i>Profile</button></a>
             <?php } ?>
         </div>
     </nav>

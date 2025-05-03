@@ -36,7 +36,7 @@ else{
                 <i class="fas fa-calendar-alt text-indigo-500 text-lg"></i>
                 <p><span class="font-semibold">Joining Date:</span> <?php echo htmlspecialchars(date('F d, Y', strtotime($data['join_date']))); ?></p>
             </div>
-            <form action="admin_logout.php?id=<?php echo $admin_id ?>" method="POST">
+            <form action="logout.php?id=<?php echo $admin_id ?>" method="POST">
                 <input type="submit" value="Logout" name="Logout" class="bg-black text-white px-4 py-2 rounded-md hover:bg-red-600 transition duration-200">
             </form>
 
@@ -125,14 +125,7 @@ else{
                     </div>
                 </a>
 
-                <!-- Logout -->
-                <a href="logout.php" class="admin-btn bg-black text-white border-gray-800 hover:bg-gray-900">
-                    <i class="fas fa-sign-out-alt text-2xl"></i>
-                    <div>
-                        <p class="font-semibold">Logout</p>
-                        <p class="text-sm">End your session securely</p>
-                    </div>
-                </a>
+                
 
             </div>
         </div>

@@ -32,7 +32,7 @@ if (isset($_POST['submit'])) {
         if (mysqli_query($conn, $query)) {
             mysqli_close($conn);
             print_r('<div class="text-red-500">Success</div>');
-            header("Location: Registration.php");
+            header("Location: login.php?msg=Registration+successfull+.+Pleasae+Login+to+Continue");
             exit();
         } else {
             echo '<h1 class = "text-red-800 font-bold font-sans text-2xl text-center w-auto h-auto">Error occured</h1> <pre class="text-red-500 font-semibold font-sans text-xl text-center w-auto h-auto">';

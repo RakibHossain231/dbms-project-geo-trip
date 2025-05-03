@@ -1,3 +1,10 @@
+<?php 
+session_start();
+if(empty($_SESSION['id']) || ((!empty($_SESSION['id'])) && $_SESSION['type']!== 'admin') ){
+    header("Location: admin_login.php?msg=You+must+login+as+admin+to+access+the+previous+page");
+}
+?>
+
 <?php
 include 'things/top.php';
 ?>
