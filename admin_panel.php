@@ -1,6 +1,47 @@
+<?php 
+session_start();
+if(empty($_SESSION['id']) || ((!empty($_SESSION['id'])) && $_SESSION['type']!== 'admin') ){
+    header("Location: admin_login.php?msg=You+must+login+as+admin+to+access+the+previous+page");
+}
+else{
+    $admin_id = $_SESSION['id'];
+    include 'things/db_connect.php';
+    $query = " SELECT * FROM admin WHERE id = '$admin_id';";
+    $result = mysqli_query($conn, $query);
+    $data = mysqli_fetch_assoc($result);
+}
+
+?>
+
 <?php include 'things/top.php'; ?>
 <body>
     <?php include 'things/navbar.php'; ?>
+    <div class="max-w-md mx-auto my-10 bg-white/90 backdrop-blur-lg shadow-xl rounded-2xl p-6 border border-gray-200">
+        <h2 class="text-2xl font-bold text-center text-cyan-600 mb-6"><i class="fas fa-user-shield mr-2"></i>Admin Profile</h2>
+        <hr class="mb-4 border-gray-300">
+
+        <div class="space-y-4 text-gray-800 flex flex-col items-center min-w-[400px]">
+
+            <div class="flex items-center gap-3">
+                <i class="fas fa-user text-indigo-500 text-lg"></i>
+                <p><span class="font-semibold">Name:</span> <?php echo htmlspecialchars($data['name']); ?></p>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <i class="fas fa-envelope text-indigo-500 text-lg"></i>
+                <p><span class="font-semibold">Email:</span> <?php echo htmlspecialchars($data['email']); ?></p>
+            </div>
+
+            <div class="flex items-center gap-3">
+                <i class="fas fa-calendar-alt text-indigo-500 text-lg"></i>
+                <p><span class="font-semibold">Joining Date:</span> <?php echo htmlspecialchars(date('F d, Y', strtotime($data['join_date']))); ?></p>
+            </div>
+            <form action="admin_logout.php?id=<?php echo $admin_id ?>" method="POST">
+                <input type="submit" value="Logout" name="Logout" class="bg-black text-white px-4 py-2 rounded-md hover:bg-red-600 transition duration-200">
+            </form>
+
+        </div>
+    </div>
     <section class="min-h-screen bg-gradient-to-br from-slate-100 to-indigo-200 flex items-center justify-center px-4 py-10">
         <div class="w-full max-w-5xl bg-white/80 backdrop-blur-md rounded-2xl shadow-2xl border border-gray-200 p-10">
 
