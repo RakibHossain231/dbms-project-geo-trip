@@ -41,15 +41,15 @@
     <div class="flex flex-col  ">
         <div class="flex flex-col bg-gradient-to-r from-[#1E293B] to-[rgb(51,65,85)] p-8 rounded-xl shadow-lg">
             <h1 class="text-2xl font-bold text-orange-400 mb-4">Send Us an Email</h1>
-            <form action="post">
+            <form action="contact_process.php" method="post">
                 <div class="flex flex-col gap-4">
-                    <input type="text" placeholder="Your Name"
+                    <input type="text" placeholder="Your Name" name="customer_name"
                         class="p-3 rounded-lg bg-gray-800 text-white border border-gray-600 focus:ring-2 focus:ring-orange-400 outline-none">
 
-                    <input type="email" placeholder="Your Email"
+                    <input type="email" placeholder="Your Email" name="customer_email"
                         class="p-3 rounded-lg bg-gray-800 text-white border border-gray-600 focus:ring-2 focus:ring-orange-400 outline-none">
 
-                    <input type="text" placeholder="Subject"
+                    <input type="text" placeholder="Subject" name="mail_subject"
                         class="p-3 rounded-lg bg-gray-800 text-white border border-gray-600 focus:ring-2 focus:ring-orange-400 outline-none">
 
                     <textarea name="message" id="message" cols="30" rows="5" placeholder="Your Message"
@@ -57,7 +57,7 @@
 
                     
                 </div>
-                <button class="btn bg-gradient-to-r from-blue-300 to-purple-700 p-4 hover:from-blue-600 hover:to-blue-800 text-white font-semibold rounded-lg shadow-md transition-all duration-300 mx-auto mt-2">
+                <button class="btn bg-white text-black  p-4 hover:bg-black hover:text-cyan-300  font-semibold rounded-lg shadow-md transition-all duration-300 mx-auto mt-2">
                         Send Message
                     </button>
             </form>
