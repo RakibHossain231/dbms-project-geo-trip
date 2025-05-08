@@ -1,0 +1,35 @@
+.update-button, .delete-button, .book-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.update-button {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.update-button:hover {
+    background-color: #45a049;
+}
+
+.delete-button {
+    background-color: #f44336;
+    color: white;
+}
+
+.delete-button:hover {
+    background-color: #e53935;
+}
+
+.book-button {
+    background-color: #008CBA;
+    color: white;
+}
+
+.book-button:hover {
+    background-color: #007b8f;
+}
