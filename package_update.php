@@ -33,38 +33,31 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
     $availability = mysqli_real_escape_string($conn, $_POST['availability']);
     $commission_rate = mysqli_real_escape_string($conn, $_POST['commission_rate']);
     $image_url = mysqli_real_escape_string($conn, $_POST['image_url']);
+    $start_date = $package['start_date']; // Keep the existing start_date
     
-    // Update query
-    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $price = mysqli_real_escape_string($conn, $_POST['price']);
-        $duration = mysqli_real_escape_string($conn, $_POST['duration']);
-        $description = mysqli_real_escape_string($conn, $_POST['description']);
-        $availability = mysqli_real_escape_string($conn, $_POST['availability']);
-        $commission_rate = mysqli_real_escape_string($conn, $_POST['commission_rate']);
-        $image_url = mysqli_real_escape_string($conn, $_POST['image_url']);
+    // Update query with the automatic calculation of expire_date
+    $update_sql = "UPDATE package SET
+                    price = '$price',
+                    duration = '$duration',
+                    descriptions = '$description',
+                    availability = '$availability',
+                    commission_rate = '$commission_rate',
+                    image_url = '$image_url',
+                    expire_date = DATE_ADD('$start_date', INTERVAL $duration DAY) 
+                    WHERE id = $package_id";
     
-        $update_sql = "UPDATE package SET
-                        price = '$price',
-                        duration = '$duration',
-                        descriptions = '$description',
-                        availability = '$availability',
-                        commission_rate = '$commission_rate',
-                        image_url = '$image_url'
-                        WHERE id = $package_id";
-    
-        if ($conn->query($update_sql) === TRUE) 
-        {
-            session_start();
-            $_SESSION['success_message'] = "Package updated successfully!";
-            header("Location: package_list.php");
-            exit();
-        } 
-        else 
-        {
-            echo "Error updating package: " . $conn->error;
-        }
+    if ($conn->query($update_sql) === TRUE) 
+    {
+        session_start();
+        $_SESSION['success_message'] = "Package updated successfully!";
+        header("Location: package_list.php");
+        exit();
+    } 
+    else 
+    {
+        echo "Error updating package: " . $conn->error;
     }
-}    
+}
 ?>
 
 <!DOCTYPE html>
@@ -128,3 +121,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         </form>
     </div>
 </body>
+</html>
