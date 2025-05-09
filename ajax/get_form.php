@@ -11,19 +11,19 @@ $location_id = $_POST['location_id'];
   <!-- Price -->
   <div class="mb-4">
     <label for="price" class="block text-sm font-medium text-gray-700">Price</label>
-    <input type="text" name="price" id="price" placeholder="Price" class="border p-2 rounded w-full" required>
+    <input type="text" name="price" id="price" placeholder="in Taka" class="border p-2 rounded w-full" required>
   </div>
 
   <!-- Duration -->
   <div class="mb-4">
     <label for="duration" class="block text-sm font-medium text-gray-700">Duration</label>
-    <input type="number" name="duration" id="duration" placeholder="Duration" class="border p-2 rounded w-full" required>
+    <input type="number" name="duration" id="duration" placeholder="in days" class="border p-2 rounded w-full" required>
   </div>
 
   <!-- Availability -->
   <div class="mb-4">
     <label for="availability" class="block text-sm font-medium text-gray-700">Availability</label>
-    <input type="number" name="availability" id="availability" placeholder="Availability" class="border p-2 rounded w-full" required>
+    <input type="number" name="availability" id="availability" placeholder="hotel rooms" class="border p-2 rounded w-full" required>
   </div>
 
   <!-- Commission Rate -->
@@ -35,7 +35,7 @@ $location_id = $_POST['location_id'];
   <!-- Image URL -->
   <div class="mb-4">
     <label for="image_url" class="block text-sm font-medium text-gray-700">Image URL</label>
-    <input type="text" name="image_url" id="image_url" placeholder="Image URL" class="border p-2 rounded w-full">
+    <input type="text" name="image_url" id="image_url" placeholder="You must give the drive link" class="border p-2 rounded w-full">
   </div>
 
   <!-- start Date -->
@@ -48,7 +48,7 @@ $location_id = $_POST['location_id'];
   <!-- Description -->
   <div class="mb-4 col-span-2">
     <label for="descriptions" class="block text-sm font-medium text-gray-700">Package Description</label>
-    <textarea name="descriptions" id="descriptions" placeholder="Package Description" class="border p-2 rounded w-full" required></textarea>
+    <textarea name="descriptions" id="descriptions" placeholder="Describe about Package" class="border p-2 rounded w-full" required></textarea>
   </div>
 
   <!-- Save Package Button -->

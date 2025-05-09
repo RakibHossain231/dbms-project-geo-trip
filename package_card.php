@@ -13,24 +13,23 @@ $query = "SELECT package.id, package.descriptions, package.price, package.durati
 $result = mysqli_query($conn, $query);
 
 // Check if the query was successful and there are packages
-if ($result && mysqli_num_rows($result) > 0) 
-{
+if ($result && mysqli_num_rows($result) > 0) {
     $packages = mysqli_fetch_all($result, MYSQLI_ASSOC);
-} 
-else 
-{
+} else {
     echo 'No packages available.';
     exit;
 }
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Package Cards</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="bg-gray-100 text-gray-800">
     <div class="container mx-auto px-4 py-8">
         <h1 class="text-3xl font-bold text-center mb-8 text-blue-700">Travel Packages</h1>
@@ -38,11 +37,10 @@ else
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <?php
             // Loop through each package and display it as a card
-            foreach ($packages as $row) 
-            {
+            foreach ($packages as $row) {
                 // Extract the first few words from the descriptions for the headline
                 $description_words = explode(' ', $row['descriptions']);
-                $headline = $row['city'].", ".$row['country'];
+                $headline = $row['city'] . ", " . $row['country'];
 
                 // Checking if 'descriptions' exists in the array
                 $image_url = isset($row['image_url']) ? htmlspecialchars($row['image_url']) : 'default_image_url.jpg';
@@ -68,7 +66,7 @@ else
                                 <button onclick="document.getElementById(\'more-info-' . $row['id'] . '\').classList.toggle(\'hidden\');" class="text-blue-500 hover:underline mb-4">View More</button>
 
                                 <!-- Booking Button aligned to the right -->
-                                <a href="booking_page.php?id=' . $row['id'] . '" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+                                <a href="book_package.php?id=' . $row['id'] . '" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
                                     Book Now
                                 </a>
                             </div>
@@ -107,4 +105,5 @@ else
         }
     </script>
 </body>
+
 </html>
