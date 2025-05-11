@@ -1,0 +1,86 @@
+/* প্যাকেজ লিস্টের জন্য মূল কনটেইনার */
+.package-list-container {
+    font-family: Arial, sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* প্যাকেজ কার্ডগুলির স্টাইল */
+.package-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.package-card {
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.package-card:hover {
+    transform: scale(1.05);
+}
+
+/* প্যাকেজের ছবি */
+.package-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* বাটন স্টাইল */
+.book-button, .update-button, .delete-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+}
+
+.book-button {
+    background-color: #008CBA;
+}
+
+.book-button:hover {
+    background-color: #007b8f;
+}
+
+.update-button {
+    background-color: #4CAF50;
+}
+
+.update-button:hover {
+    background-color: #45a049;
+}
+
+.delete-button {
+    background-color: #f44336;
+}
+
+.delete-button:hover {
+    background-color: #e53935;
+}
+
+/* Admin Actions */
+.admin-actions {
+    display: flex;
+    justify-content: space-between;
+}
