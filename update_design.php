@@ -1,7 +1,7 @@
 <?php include 'things/top.php'; ?>
 
 <?php
-include 'things/db_connect.php';
+include('things/db_connect.php');
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['id'])) {
     // checking if the user came in valid way.

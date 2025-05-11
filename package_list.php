@@ -1,3 +1,13 @@
+<?php
+session_start();
+if (isset($_SESSION['success_message']))  
+{
+    echo "<div class='bg-red-100 text-green-800 px-4 py-3 rounded mb-4 text-center'>
+            {$_SESSION['success_message']}
+          </div>";
+    unset($_SESSION['success_message']);
+}
+?>
 
 <?php 
 include('things/db_connect.php');
@@ -16,6 +26,12 @@ include('things/db_connect.php');
 
     <div class="container mx-auto px-4 py-8">
         <h1 class="text-3xl font-bold text-center mb-8 text-blue-700">Travel Packages</h1>
+
+        <div class="flex justify-end mb-6">
+            <a href="package_creator.php" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+                Create New Package
+            </a>
+        </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <?php
@@ -52,7 +68,8 @@ include('things/db_connect.php');
                                 </div>
 
                                 <div class="flex justify-between items-center">
-                                    <a href="book_package.php?id=' . $row['id'] . '" class="text-white bg-green-500 px-3 py-1 rounded hover:bg-green-200">Book Now</a>
+                                    <a href="package_update.php?id=' . $row['id'] . '" class="text-white bg-green-500 px-3 py-1 rounded hover:bg-green-600">Edit</a>
+                                    <a href="package_delete.php?id=' . $row['id'] . '" class="text-white bg-red-500 px-3 py-1 rounded hover:bg-red-600" onclick="return confirm(\'Are you sure?\')">Delete</a>
                                 </div>
                             </div>
                         </div>';

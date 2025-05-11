@@ -71,12 +71,20 @@ else{
                     </div>
                 </a>
 
-                <!-- Packages -->
-                <a href="packages_list.php" class="admin-btn bg-green-50 border-green-200 text-green-700 hover:bg-green-100">
+                <!-- Packages  create-->
+                <a href="package_creator.php" class="admin-btn bg-green-50 border-green-200 text-green-700 hover:bg-green-100">
                     <i class="fas fa-box-open text-2xl"></i>
                     <div>
-                        <p class="font-semibold">Manage Packages</p>
-                        <p class="text-sm text-gray-600">Create or edit travel/visa packages</p>
+                        <p class="font-semibold">Create Package</p>
+                        <p class="text-sm text-gray-600">Add a new package To the website</p>
+                    </div>
+                </a>
+                <!-- Packages  update-->
+                <a href="package_list.php" class="admin-btn bg-green-50 border-green-200 text-green-700 hover:bg-green-100">
+                    <i class="fas fa-box-open text-2xl"></i>
+                    <div>
+                        <p class="font-semibold">Modify Package</p>
+                        <p class="text-sm text-gray-600">Modify The data of existing Packages</p>
                     </div>
                 </a>
 
@@ -88,6 +96,7 @@ else{
                         <p class="text-sm text-gray-600">See and manage all bookings</p>
                     </div>
                 </a>
+                
 
                 <!-- Payments -->
                 <a href="pending_payments.php" class="admin-btn bg-red-50 border-red-200 text-red-700 hover:bg-red-100">
@@ -124,7 +133,38 @@ else{
                         <p class="text-sm text-gray-600">Add new admin to the database</p>
                     </div>
                 </a>
-
+                <!-- Add Location -->
+                <a href="add_location.php" class="admin-btn bg-sky-100 border-sky-300 text-blue-700 hover:bg-yellow-100 ">
+                    <i class="fas fa-book text-2xl"></i>
+                    <div>
+                        <p class="font-semibold">Add Location</p>
+                        <p class="text-sm text-gray-600">Add New City To the Database</p>
+                    </div>
+                </a>
+                <!-- Update Location -->
+                <a href="update_location.php" class="admin-btn bg-green-100 border-green-300 text-green-700 hover:bg-green-500 ">
+                    <i class="fas fa-book text-2xl"></i>
+                    <div>
+                        <p class="font-semibold">Update Location</p>
+                        <p class="text-sm text-gray-600">Update Location Data</p>
+                    </div>
+                </a>
+                <!-- Add hotel -->
+                <a href="add_hotel.php" class="admin-btn bg-sky-100 border-sky-300 text-blue-700 hover:bg-yellow-100 ">
+                    <i class="fas fa-book text-2xl"></i>
+                    <div>
+                        <p class="font-semibold">Add Hotel</p>
+                        <p class="text-sm text-gray-600">Add New Hotel To the Database</p>
+                    </div>
+                </a>
+                <!-- Update hotel -->
+                <a href="update_hotel.php" class="admin-btn bg-green-100 border-green-300 text-green-700 hover:bg-green-500 ">
+                    <i class="fas fa-book text-2xl"></i>
+                    <div>
+                        <p class="font-semibold">Update Hotel</p>
+                        <p class="text-sm text-gray-600">Fix Mistakes Of Hotel data</p>
+                    </div>
+                </a>
                 
 
             </div>

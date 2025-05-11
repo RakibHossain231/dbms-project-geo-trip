@@ -1,7 +1,7 @@
 <?php 
-    $username = 'tamim';
+    $username = 'root';
     $hostname = 'localhost';
-    $password = 'tamim1234';
+    $password = '';
     $database = 'geo_trips';
     $conn = mysqli_connect($hostname,$username,$password,$database);
 ?>

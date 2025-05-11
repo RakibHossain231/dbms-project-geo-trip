@@ -29,7 +29,7 @@ function page_name()
             <li><a class="hover:bg-cyan-400 p-2 rounded-lg  <?php if (page_name() === 'home') echo 'text-neutral-200'; ?>" href="home.php">Home</a></li>
             <li><a class="hover:bg-cyan-400 p-2 rounded-lg <?php if (page_name() === 'about') echo 'text-neutral-200'; ?>" href="about.php">About Us</a></li>
             <li><a class="hover:bg-cyan-400 p-2 rounded-lg <?php if (page_name() === 'services') echo 'text-neutral-200'; ?>" href="services.php">Services</a></li>
-            <li><a class="hover:bg-cyan-400 p-2 rounded-lg <?php if (page_name() === 'packages') echo 'text-neutral-200'; ?>" href="packages.php">Packages</a></li>
+            <li><a class="hover:bg-cyan-400 p-2 rounded-lg <?php if (page_name() === 'packages') echo 'text-neutral-200'; ?>" href="package_card.php">Packages</a></li>
             <li><a class="hover:bg-cyan-400 p-2 rounded-lg <?php if (page_name() === 'visa_docs') echo 'text-neutral-200'; ?>" href="visa_docs.php">Visa Info</a></li>
         </ul>
         <div>

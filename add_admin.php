@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <body>
     <?php include 'things/navbar.php'; ?>
-    <section class="min-h-screen flex items-center justify-center bg-gradient-to-r from-fuchsia-600 to-purple-600 px-4 py-10">
+    <section class="min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-200 to-purple-200 px-4 py-10">
         <div class="w-full max-w-md bg-white/80 backdrop-blur-md border border-gray-300 shadow-xl rounded-2xl p-8">
 
             <h2 class="text-3xl font-bold text-center text-indigo-800 mb-6">
