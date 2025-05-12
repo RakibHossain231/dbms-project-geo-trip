@@ -89,7 +89,7 @@ else{
                 </a>
 
                 <!-- Bookings -->
-                <a href="view_bookings.php" class="admin-btn bg-yellow-50 border-yellow-200 text-yellow-700 hover:bg-yellow-100">
+                <a href="view_booking.php" class="admin-btn bg-yellow-50 border-yellow-200 text-yellow-700 hover:bg-yellow-100">
                     <i class="fas fa-book text-2xl"></i>
                     <div>
                         <p class="font-semibold">View Bookings</p>
