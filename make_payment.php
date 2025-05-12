@@ -9,16 +9,25 @@ include 'things/top.php';
 include 'things/db_connect.php';
 
 $booking_id = isset($_GET['booking_id']) ? intval($_GET['booking_id']) : null;
-$package_id = isset($_GET['package_id']) ? intval($_GET['package_id']) : null;
 
-if (!$booking_id || !$package_id) {
-    die('Invalid booking or package ID.');
+if (!$booking_id) {
+    die('Invalid booking ID.');
 }
 
-// Fetch package price
-$priceResult = mysqli_query($conn, "SELECT price FROM package WHERE id = $package_id");
-$package = mysqli_fetch_assoc($priceResult);
-$price = $package ? $package['price'] : 0;
+// Fetch booking info along with package price
+$bookingResult = mysqli_query($conn, "
+    SELECT b.id AS booking_id, p.price 
+    FROM bookings b 
+    JOIN package p ON b.package_id = p.id 
+    WHERE b.id = $booking_id
+");
+$booking = mysqli_fetch_assoc($bookingResult);
+
+if (!$booking) {
+    die('Booking not found.');
+}
+
+$price = $booking['price'];
 
 // Fetch coupon codes
 $couponsResult = mysqli_query($conn, "SELECT id, coupon_code FROM coupons");
@@ -28,20 +37,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $payment_method = $_POST['payment_method'];
     $transaction_id = trim($_POST['transaction_id']);
     $coupon_id = !empty($_POST['coupon_id']) ? intval($_POST['coupon_id']) : null;
+    $paid_date = date('Y-m-d');
 
-    $stmt = $conn->prepare("INSERT INTO payments (payment_method, transaction_id, coupon_id , package_id, amount) VALUES (?, ?, ?, ?, ?)");
-    $stmt->bind_param("ssiid", $payment_method, $transaction_id, $coupon_id, $package_id, $price);
+    $stmt = $conn->prepare("INSERT INTO payments (payment_method, paid_on,  transaction_id, coupon_id, booking_id, amount) VALUES (?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("sssiid", $payment_method, $paid_date, $transaction_id, $coupon_id, $booking_id, $price);
     $stmt->execute();
 
     if ($stmt->affected_rows > 0) {
+        // Update the booking payment status and set payment_id
         $payment_id = $stmt->insert_id;
-
-        $update = $conn->prepare("UPDATE bookings SET payment_id = ? WHERE id = ?");
-        $update->bind_param("ii", $payment_id, $booking_id);
+        $update = $conn->prepare("UPDATE bookings SET payment_status = 'pending', payment_id = ? WHERE id = ?");
+        $update->bind_param("ii", $payment_id, $booking_id); // $payment_id এবং $booking_id এখানে ব্যবহার হচ্ছে
         $update->execute();
 
         echo "<script>
-                alert('Payment successful!');
+                alert('Payment submitted successfully! Awaiting admin verification.');
                 window.location.href='user_profile.php';
               </script>";
     } else {
@@ -78,7 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <div>
             <label class="block font-semibold mb-1">Transaction ID:</label>
-            <input type="text" name="transaction_id" id="transaction_id" required class="w-full border px-3 py-2 rounded">
+            <input type="text" name="transaction_id" id="transaction_id" required class="w-full border px-3 py-2 rounded " placeholder="Transaction Id has to be betwen 6 and 25 characters">
         </div>
 
         <div>
