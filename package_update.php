@@ -69,7 +69,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
     <!-- Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
 </head>
+<?php include 'things/top.php'  ?>
 <body class="bg-gray-100">
+    <?php include 'things/navbar.php'  ?>
     <div class="max-w-3xl mx-auto p-8 bg-white rounded-lg shadow-lg space-y-6">
         <h2 class="text-3xl font-semibold text-center text-gray-800 mb-6">Update Package</h2>
 
@@ -120,5 +122,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
             </div>
         </form>
     </div>
+    <div style="text-align: right; margin-top: 10px; margin-bottom: 20px; padding-right: 20px;">
+      <button onclick="window.history.back()" style="background-color: #007bff; color: white; padding: 5px 15px; border: none; border-radius: 4px; cursor: pointer; font-size: 14px;">
+          Go Back
+      </button>
+  </div>
 </body>
+<?php include 'things/footer.php'  ?>
 </html>

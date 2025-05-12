@@ -99,7 +99,7 @@ else{
                 
 
                 <!-- Payments -->
-                <a href="pending_payments.php" class="admin-btn bg-red-50 border-red-200 text-red-700 hover:bg-red-100">
+                <a href="pending_payment.php" class="admin-btn bg-red-50 border-red-200 text-red-700 hover:bg-red-100">
                     <i class="fas fa-money-check-alt text-2xl"></i>
                     <div>
                         <p class="font-semibold">Pending Payments</p>

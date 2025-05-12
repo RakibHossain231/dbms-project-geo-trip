@@ -128,6 +128,13 @@ $result = $conn->query($sql);
         <?php } ?>
         </tbody>
     </table>
+    
+    <!-- Add Go Back Button with modified styling -->
+    <div style="text-align: right; margin-top: 10px; margin-bottom: 20px; padding-right: 20px;">
+        <button onclick="window.history.back()" style="background-color: #007bff; color: white; padding: 5px 15px; border: none; border-radius: 4px; cursor: pointer; font-size: 14px;">
+            Go Back
+        </button>
+    </div>
 </body>
 <?php include 'things/footer.php'; ?>
 </html>

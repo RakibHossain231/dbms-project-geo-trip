@@ -24,14 +24,18 @@ include('things/db_connect.php');
 <body class="bg-gray-100 text-gray-800">
 <?php include 'things/navbar.php'  ?>
 
-    <div class="container mx-auto px-4 py-8">
-        <h1 class="text-3xl font-bold text-center mb-8 text-blue-700">Travel Packages</h1>
-
-        <div class="flex justify-end mb-6">
+        <div class="container mx-auto px-4 py-8">
+            <h1 class="text-3xl font-bold text-center mb-8 text-blue-700">Travel Packages</h1>
+            <div class="flex justify-end mb-6 space-x-4"> <!-- Adding space-x-4 for the gap -->
+            <!-- Go Back Button with modified styling -->
+            <button onclick="window.history.back()" style="background-color: #007bff; color: white; padding: 5px 15px; border: none; border-radius: 4px; cursor: pointer; font-size: 14px;">
+                Go Back
+            </button>
             <a href="package_creator.php" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
                 Create New Package
             </a>
         </div>
+
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <?php
@@ -97,7 +101,12 @@ include('things/db_connect.php');
             }
         }
     </script>
-
+    <!-- Add Go Back Button with modified styling -->
+    <div style="text-align: right; margin-top: 10px; margin-bottom: 20px; padding-right: 20px;">
+        <button onclick="window.history.back()" style="background-color: #007bff; color: white; padding: 5px 15px; border: none; border-radius: 4px; cursor: pointer; font-size: 14px;">
+            Go Back
+        </button>
+    </div>
 </body>
 <?php include 'things/footer.php'  ?>
 
