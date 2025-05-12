@@ -122,11 +122,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
             </div>
         </form>
     </div>
+    
+    <!-- Back Button add -->
     <div style="text-align: right; margin-top: 10px; margin-bottom: 20px; padding-right: 20px;">
       <button onclick="window.history.back()" style="background-color: #007bff; color: white; padding: 5px 15px; border: none; border-radius: 4px; cursor: pointer; font-size: 14px;">
           Go Back
       </button>
-  </div>
+    </div>
 </body>
 <?php include 'things/footer.php'  ?>
 </html>
