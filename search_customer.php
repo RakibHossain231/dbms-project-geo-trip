@@ -59,7 +59,7 @@
             while ($row = mysqli_fetch_assoc($result)) {
                 $customer_id = $row['customerID'];  // Verify if this column exists
                 // Query to count the PAID bookings for the customer
-                $booking_query = "SELECT COUNT(*) AS total_paid FROM bookings WHERE customer_id='$customer_id' AND payment_status='PAID'";
+                $booking_query = "SELECT COUNT(*) AS total_paid FROM bookings WHERE customer_id='$customer_id' AND payment_status='verified'";
                 $booking_result = mysqli_query($conn, $booking_query);
                 $booking_row = mysqli_fetch_assoc($booking_result);
                 $total_paid = $booking_row['total_paid'];
@@ -200,7 +200,12 @@
             border-radius: 8px;
         }
     </style>
-
+    <!-- Add Go Back Button with modified styling -->
+    <div style="text-align: right; margin-top: 10px; margin-bottom: 20px; padding-right: 20px;">
+        <button onclick="window.history.back()" style="background-color: #007bff; color: white; padding: 5px 15px; border: none; border-radius: 4px; cursor: pointer; font-size: 14px;">
+            Go Back
+        </button>
+    </div>
 </body>
 
 <?php include 'things/footer.php'; ?>
