@@ -78,9 +78,13 @@
                             Student Id Card and Tution fee receipt [For student]
                         </li>
                     </ul>
-                    <button class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-300">
-                        Apply for Visa
-                    </button>
+                     <a href="upload_singapur.php">
+                            <button class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-300">
+                              Apply for Visa
+                             </button>
+                    </a>
+
+
                 </div>
             </div>
 
@@ -157,9 +161,11 @@
                             Student Id Card and Tution fee receipt [For student]
                         </li>
                     </ul>
-                    <button class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-300">
-                        Apply for Visa
-                    </button>
+                    <a href="upload_thiland.php">
+                         <button class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-300">
+                               Apply for Visa
+                         </button>
+                     </a>
                 </div>
             </div>
             <!-- malaysia Card -->
@@ -235,11 +241,13 @@
                             Student Id Card and Tution fee receipt [For student]
                         </li>
                     </ul>
-                    <button class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-300">
-                        Apply for Visa
-                    </button>
+                    <a href="upload_malaysia.php">
+                            <button class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-300">
+                          Apply for Visa
+                        </button>
+                    </a>
                 </div>
-            </div>
+              </div>
             <!-- India Card -->
             <div class="bg-gradient-to-br from-white to-[#FFF7F3] rounded-xl max-w-[95%] shadow-lg  transform transition duration-300 hover:scale-102">
                 <img src="resources/images/india.jpg" alt="France" class="w-full h-48 object-cover rounded-xl">
@@ -313,9 +321,11 @@
                             Student Id Card and Tution fee receipt [For student]
                         </li>
                     </ul>
-                    <button class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-300">
-                        Apply for Visa
-                    </button>
+                    <a href="upload_india.php">
+                            <button class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition duration-300">
+                              Apply for Visa
+                            </button>
+                    </a>
                 </div>
             </div>
         </div>
